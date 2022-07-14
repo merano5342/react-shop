@@ -1,0 +1,47 @@
+  @import '../../css/base.scss';
+
+  section {
+    label {
+      font-weight: bold;
+      color: var(--grey-400);
+    }
+
+    .input-group>input::placeholder {
+      color: var(--input-text);
+    }
+
+    .input-group>input,
+    .input-group>select {
+      border: 1px solid var(--input-border);
+    }
+  }
+
+
+  section[data-phase="shipping"] {
+    input[type="radio"] {
+      margin: 10px 20px 0 6px;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: space-between;
+      border: 2px solid var(--grey-400);
+      border-radius: 6px;
+      padding: 16px 20px;
+    }
+
+    .radio-right {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .radio-period,
+    .radio-price {
+      color: var(--grey-400);
+      font-size: 14px;
+    }
+
+  }
