@@ -45,13 +45,22 @@ body {
 }
 
 .container {
-  margin: 0px 15px;
+  margin: 0px auto;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: bold;
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
 }
 
 h3 {
@@ -80,6 +89,13 @@ ul {
 }
 
 .progress-control {
-  border-top: 1px var(--grey-300) solid;
+  border-top: 1px solid #E6E6EB;
   padding-top: 26px;
+}
+
+
+.footer-container {
+  padding: 100px;
+  margin-top: 100px;
+  background-color: var(--footer-background-color);
 }
