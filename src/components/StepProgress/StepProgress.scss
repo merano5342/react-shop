@@ -1,9 +1,10 @@
-  @import '../css/base.scss';
+  @import '../../css/base.scss';
+
 
   .progress-container {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 40px;
+    margin: 50px 0;
   }
 
   .progress-group {

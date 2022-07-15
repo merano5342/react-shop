@@ -1,4 +1,4 @@
-import StepProgress from './StepProgress';
+import StepProgress from './StepProgress/StepProgress';
 import Header from './Header/Header';
 import Cart from './Cart/Cart';
 import Step1 from './Steps/Step1';

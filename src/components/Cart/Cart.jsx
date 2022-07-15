@@ -1,4 +1,6 @@
 import './cart.scss';
+import { ReactComponent as Minus } from '../../assets/icons/minus.svg';
+import { ReactComponent as Plus } from '../../assets/icons/plus.svg';
 
 const productItem = [
   {
@@ -34,7 +36,9 @@ const Cart = () => {
                 </div>
                 <div className="product-control-container">
                   <div className="product-control">
+                    <Minus className="minus" alt="" />
                     <span className="product-count">{item.count}</span>
+                    <Plus className="plus" alt="" />
                   </div>
                 </div>
               </div>

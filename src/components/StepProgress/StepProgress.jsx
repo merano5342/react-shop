@@ -1,4 +1,6 @@
 import './StepProgress.scss';
+import { ReactComponent as Complete } from '../../assets/icons/pg-complete.svg';
+import { ReactComponent as Circle } from '../../assets/icons/circle.svg';
 
 const StepProgress = () => {
   const steps = ['寄送地址', '運送方式', '付款資訊'];
@@ -9,10 +11,7 @@ const StepProgress = () => {
       <section className="progress-container col col-12">
         <span className="progress-group">
           <span className="progress-icon">
-            <span className="text">1</span>
-            <svg className="icon cursor-point">
-              <use xlinkHref="#svg-icon-pg-complete" />
-            </svg>
+            <Complete className="complete" alt="" />
           </span>
           <span className="progress-label">{steps[0]}</span>
         </span>
@@ -20,9 +19,7 @@ const StepProgress = () => {
         <span className="progress-group" data-phase="shipping">
           <span className="progress-icon">
             <span className="text">2</span>
-            <svg className="icon cursor-point">
-              <use xlinkHref="#svg-icon-pg-complete" />
-            </svg>
+            <Circle className="circle" alt="" />
           </span>
           <span className="progress-label">{steps[1]}</span>
         </span>
