@@ -1,14 +1,32 @@
+import StepProgress from './StepProgress';
 import Header from './Header/Header';
-import 'css/style.scss';
+import Cart from './Cart';
+import Step1 from './Steps/Step1';
+import Step2 from './Steps/Step2';
+import Step3 from './Steps/Step3';
+
+// import 'css/main.scss';
 
 const App = () => {
   return (
-    <div className="app">
-      <h1>h1</h1>
-      <section data-name="App">
-        <Header />
-      </section>
-    </div>
+    <>
+      <Header />
+      <main className="site-main">
+        <div className="container main-container">
+          <section
+            className="register-container col col-lg-6 col-sm-12"
+            data-phase="1"
+            data-total-price="0"
+          >
+            <StepProgress />
+            <Step1 />
+            <Step2 />
+            <Step3 />
+          </section>
+          <Cart />
+        </div>
+      </main>
+    </>
   );
 };
 

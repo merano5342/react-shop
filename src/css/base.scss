@@ -1,0 +1,26 @@
+:root {
+  --white: #FFFFFF;
+  --pink: #F67599;
+  --grey-800: #2A2A2A;
+  --grey-700: #333333;
+  --grey-400: #808080;
+  --grey-300: #999999;
+
+  --site-edge-margin: 15px;
+
+  --main-font-family: 'Noto Sans TC', sans-serif;
+}
+
+.container {
+  margin: 0px 15px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+

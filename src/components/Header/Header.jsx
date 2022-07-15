@@ -11,7 +11,7 @@ const Header = () => {
           <ul className="nav-list site-menu-list mr-auto">
             {navItem.map((item) => {
               return (
-                <li className="nav-item m-3" key={item.id}>
+                <li className="nav-item m-3" key={navItem.indexOf(item) + 1}>
                   {item}
                 </li>
               );

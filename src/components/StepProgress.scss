@@ -1,0 +1,44 @@
+  @import '../css/main.scss';
+
+  .progress-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+
+  .progress-group {
+    display: flex;
+
+
+    .progress-icon {
+      display: inline-block;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      border-radius: 50%;
+
+      .text {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0px;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: center;
+        color: inherit;
+      }
+
+      .icon {
+        width: inherit;
+        height: inherit;
+      }
+    }
+
+    .progress-label {
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--main-text);
+    }
+  }
