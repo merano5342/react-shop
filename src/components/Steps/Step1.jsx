@@ -128,7 +128,7 @@ const Inputs = (item) => {
 
 const Step1 = () => {
   return (
-    <section className="form-body col col-12">
+    <section className="form-body col col-12" data-phase="address">
       <h3 className="form-title mb-3">寄送地址</h3>
       <div className="row">
         {Inputs(inputItem[0])}

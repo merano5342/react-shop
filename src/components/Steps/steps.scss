@@ -1,9 +1,44 @@
   @import '../../css/base.scss';
 
-  label {
-    color: var(--grey-400);
+  section[data-phase="address"] {
+
+    label {
+      color: var(--grey-400);
+    }
+
+    .input-group>input::placeholder {
+      color: var(--grey-300);
+    }
   }
 
-  .input-group>input::placeholder {
-    color: var(--grey-300);
+  section[data-phase="shipping"] {
+    input[type="radio"] {
+      margin-right: 20px;
+      margin-left: 6px;
+    }
+
+
+    // input:checked {
+
+    // }
+
+    .radio-group {
+      display: flex;
+      justify-content: space-between;
+      border: var(--grey-700) 2px solid;
+      border-radius: 6px;
+      padding: 16px 20px;
+    }
+
+    .radio-right {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .radio-period,
+    .radio-price {
+      color: var(--grey-400);
+      font-size: 14px;
+    }
+
   }

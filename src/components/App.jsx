@@ -2,7 +2,7 @@ import StepProgress from './StepProgress';
 import Header from './Header/Header';
 import Cart from './Cart';
 import Step1 from './Steps/Step1';
-// import Step2 from './Steps/Step2';
+import Step2 from './Steps/Step2';
 // import Step3 from './Steps/Step3';
 
 // import 'css/main.scss';
@@ -20,8 +20,7 @@ const App = () => {
           >
             <StepProgress />
             <Step1 />
-            {/* <Step2 />
-            <Step3 /> */}
+            <Step2 />
           </section>
           <Cart />
         </div>
