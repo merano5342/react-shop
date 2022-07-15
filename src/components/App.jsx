@@ -4,6 +4,7 @@ import Cart from './Cart';
 import Step1 from './Steps/Step1';
 import Step2 from './Steps/Step2';
 import Step3 from './Steps/Step3';
+import ProgressControl from './ProgressControl';
 
 // import 'css/main.scss';
 
@@ -22,6 +23,7 @@ const App = () => {
             <Step1 />
             <Step2 />
             <Step3 />
+            <ProgressControl />
           </section>
           <Cart />
         </div>

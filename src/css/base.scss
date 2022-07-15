@@ -62,3 +62,24 @@ ol,
 ul {
   padding-left: 0;
 }
+
+.btn-primary {
+  background-color: var(--pink);
+  border-color: var(--pink);
+  border-radius: 8px;
+
+  &:hover {
+    background-color: var(--pink);
+    border-color: var(--pink);
+  }
+
+  &:active {
+    background-color: var(--pink);
+    border-color: var(--pink);
+  }
+}
+
+.progress-control {
+  border-top: 1px var(--grey-300) solid;
+  padding-top: 26px;
+}
