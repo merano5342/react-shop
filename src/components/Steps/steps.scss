@@ -1,0 +1,9 @@
+  @import '../../css/base.scss';
+
+  label {
+    color: var(--grey-400);
+  }
+
+  .input-group>input::placeholder {
+    color: var(--grey-300);
+  }
