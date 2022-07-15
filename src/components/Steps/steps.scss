@@ -1,15 +1,21 @@
   @import '../../css/base.scss';
 
-  section[data-phase="address"] {
-
+  section {
     label {
+      font-weight: bold;
       color: var(--grey-400);
     }
 
     .input-group>input::placeholder {
-      color: var(--grey-300);
+      color: var(--input-text);
+    }
+
+    .input-group>input,
+    .input-group>select {
+      border: 1px solid var(--input-border);
     }
   }
+
 
   section[data-phase="shipping"] {
     input[type="radio"] {
