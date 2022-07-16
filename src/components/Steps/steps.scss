@@ -19,19 +19,16 @@
 
   section[data-phase="shipping"] {
     input[type="radio"] {
-      margin-right: 20px;
-      margin-left: 6px;
+      margin: 10px 20px 0 6px;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
     }
-
-
-    // input:checked {
-
-    // }
 
     .radio-group {
       display: flex;
       justify-content: space-between;
-      border: var(--grey-700) 2px solid;
+      border: 2px solid var(--grey-400);
       border-radius: 6px;
       padding: 16px 20px;
     }

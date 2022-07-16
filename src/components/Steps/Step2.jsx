@@ -23,7 +23,8 @@ const Step2 = () => {
         return (
           <div className="radio-group col col-12 mb-3" key={x.id}>
             <div className="radio-right">
-              <input id={x.id} type="radio" name="shipping" />
+              <input id={x.id} type="radio" name="shipping" className="radio" />
+              <label htmlFor="radio" />
               <div className="radio-info">
                 <div className="radio-text">{x.name}</div>
                 <div className="radio-period col col-12">{x.period}</div>
