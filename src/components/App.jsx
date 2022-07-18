@@ -1,9 +1,9 @@
-import StepProgress from './StepProgress/StepProgress';
-import Header from './Header/Header';
-import Cart from './Cart/Cart';
-import Step1 from './Steps/Step1';
-import Step2 from './Steps/Step2';
-import Step3 from './Steps/Step3';
+import StepProgress from './StepProgress';
+import Header from './Header';
+import Cart from './Cart';
+import Step1 from './Step1';
+import Step2 from './Step2';
+import Step3 from './Step3';
 import ProgressControl from './ProgressControl';
 import Footer from './Footer';
 

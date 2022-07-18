@@ -1,5 +1,6 @@
-import { ReactComponent as LeftArrow } from '../assets/icons/left-arrow.svg';
-import { ReactComponent as ReftArrow } from '../assets/icons/right-arrow.svg';
+import './ProgressControl.scss'
+import { ReactComponent as LeftArrow } from '../../assets/icons/left-arrow.svg';
+import { ReactComponent as ReftArrow } from '../../assets/icons/right-arrow.svg';
 
 const ProgressControl = () => {
   return (

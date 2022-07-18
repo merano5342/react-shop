@@ -1,5 +1,5 @@
 // import React from 'react';
-import './header.scss';
+import './Header.scss';
 
 const navItem = ['男款', '女款', '最新消息', '客製商品', '聯絡我們'];
 

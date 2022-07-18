@@ -63,15 +63,12 @@ h4 {
   }
 }
 
-h3 {
-  font-size: 24px;
-}
-
 ol,
 ul {
   padding-left: 0;
 }
 
+// button
 .btn-primary {
   background-color: var(--pink);
   border-color: var(--pink);
@@ -88,22 +85,19 @@ ul {
   }
 }
 
-.progress-control {
-  border-top: 1px solid #E6E6EB;
-  padding-top: 26px;
-}
+// inputs
+section {
+  label {
+    font-weight: bold;
+    color: var(--grey-400);
+  }
 
+  .input-group>input::placeholder {
+    color: var(--input-text);
+  }
 
-.footer-container {
-  padding: 100px;
-  margin-top: 100px;
-  background-color: var(--footer-background-color);
-}
-
-.left-arrow {
-  margin: 0 5px 6px 0;
-}
-
-.right-arrow {
-  margin: 0 0 5px 6px;
+  .input-group>input,
+  .input-group>select {
+    border: 1px solid var(--input-border);
+  }
 }

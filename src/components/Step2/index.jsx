@@ -1,4 +1,6 @@
-import './steps.scss';
+// phase = "shipping"
+
+import './Step2.scss';
 
 const radioData = [
   {

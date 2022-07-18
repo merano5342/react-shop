@@ -1,4 +1,4 @@
-import './steps.scss';
+// phase = "credit-card"
 
 const inputData = [
   {
