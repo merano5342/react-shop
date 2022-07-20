@@ -19,8 +19,12 @@ const STEP_MAP = [Step1, Step2, Step3];
 
 
 export default function App() {
+
   const [stepIdx, setIdx] = React.useState(0);
   let StepControl = STEP_MAP[stepIdx];
+  const StepPhase = () => {
+    setIdx(stepIdx + 1)
+  }
 
   const TempBtn = () => {
     return (
@@ -39,7 +43,7 @@ export default function App() {
             className="btn next-btn btn-primary px-5 py-2"
             type="button"
             disabled={!(stepIdx < 2)}
-            onClick={() => setIdx(stepIdx + 1)} >
+            onClick={() => StepPhase()} >
             {stepIdx < 2 ? '下一步' : '結帳'}
             <ReftArrow className="right-arrow" alt="" />
           </button>
@@ -48,16 +52,15 @@ export default function App() {
     );
   };
 
-  //onClick={() => setIdx(stepIdx)}
 
-  //onClick={() => setIdx(stepIdx + 1)} 
+
   return (
     <>
       <Header />
       <main className="site-main">
         <div className="container main-container row">
           <section className="register-container col col-lg-7 col-sm-12">
-            <StepProgress />
+            <StepProgress StepPhase={stepIdx} />
 
             <StepControl />
             <TempBtn />
