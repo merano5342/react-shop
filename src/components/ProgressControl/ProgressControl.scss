@@ -10,3 +10,10 @@
 .right-arrow {
   margin: 0 0 5px 6px;
 }
+
+button.pre-btn[data-active="false"] {
+  border-color: var(--progress-undone-color);
+  color: var(--progress-undone-color);
+  cursor: not-allowed;
+}
+
