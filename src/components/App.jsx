@@ -22,6 +22,9 @@ export default function App() {
 
   const [stepIdx, setIdx] = React.useState(0);
   let StepControl = STEP_MAP[stepIdx];
+  const StepPhase = () => {
+    setIdx(stepIdx + 1)
+  }
 
   const TempBtn = () => {
     return (
