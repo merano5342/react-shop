@@ -22,9 +22,6 @@ export default function App() {
 
   const [stepIdx, setIdx] = React.useState(0);
   let StepControl = STEP_MAP[stepIdx];
-  const StepPhase = () => {
-    setIdx(stepIdx + 1)
-  }
 
   const TempBtn = () => {
     return (
@@ -33,8 +30,8 @@ export default function App() {
           <button
             className="btn pre-btn px-5 py-2"
             type="button"
-            data-active={stepIdx > 0}
-            disabled={!(stepIdx > 0)}
+            data-active={!(stepIdx === 0)}
+            disabled=''
             onClick={() => setIdx(stepIdx - 1)} >
             <LeftArrow className="left-arrow" alt="" />
             上一步
@@ -42,9 +39,10 @@ export default function App() {
           <button
             className="btn next-btn btn-primary px-5 py-2"
             type="button"
+            data-active=""
             disabled={!(stepIdx < 2)}
-            onClick={() => StepPhase()} >
-            {stepIdx < 2 ? '下一步' : '結帳'}
+            onClick={() => setIdx(stepIdx + 1)} >
+            {stepIdx < 2 ? '下一步' : '確認下單'}
             <ReftArrow className="right-arrow" alt="" />
           </button>
         </div>
