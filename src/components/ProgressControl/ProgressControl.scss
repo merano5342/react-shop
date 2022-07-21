@@ -12,8 +12,11 @@
 }
 
 button.pre-btn[data-active="false"] {
-  border-color: var(--progress-undone-color);
-  color: var(--progress-undone-color);
-  cursor: not-allowed;
+  display: none;
 }
 
+// button.next-btn[data-active="false"] {
+//   border-color: var(--progress-undone-color);
+//   color: var(--progress-undone-color);
+//   cursor: not-allowed;
+// }
