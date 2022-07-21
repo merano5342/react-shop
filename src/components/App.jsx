@@ -22,12 +22,6 @@ export default function App() {
 
   const [stepIdx, setIdx] = React.useState(0);
   let StepControl = STEP_MAP[stepIdx];
-<<<<<<< HEAD
-=======
-  const StepPhase = () => {
-    setIdx(stepIdx + 1)
-  }
->>>>>>> 6d05d48 (# This is a combination of 3 commits.)
 
   const TempBtn = () => {
     return (
@@ -36,13 +30,8 @@ export default function App() {
           <button
             className="btn pre-btn px-5 py-2"
             type="button"
-<<<<<<< HEAD
             data-active={!(stepIdx === 0)}
             disabled=''
-=======
-            data-active={stepIdx > 0}
-            disabled={!(stepIdx > 0)}
->>>>>>> 6d05d48 (# This is a combination of 3 commits.)
             onClick={() => setIdx(stepIdx - 1)} >
             <LeftArrow className="left-arrow" alt="" />
             上一步
