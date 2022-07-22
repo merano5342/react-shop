@@ -1,0 +1,14 @@
+@import "../../css/main.scss";
+
+nav {
+  display: flex;
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+
+    .nav-item {
+      cursor: pointer;
+    }
+  }
+}
