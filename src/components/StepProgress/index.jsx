@@ -14,13 +14,13 @@ const StepProgress = (props) => {
 
   const [Step1, Step2, Step3] = [steps[0], steps[1], steps[2]]
 
-  const statusControl = (theIdx) => {
+  const statusControl = (idx) => {
     let statusControl = ''
-    if (step === theIdx) {
+    if (step === idx) {
       statusControl = 'on-step'
-    } else if (step > theIdx) {
+    } else if (step > idx) {
       statusControl = 'done'
-    } else if (step < theIdx) {
+    } else if (step < idx) {
       statusControl = 'disable'
     }
     return statusControl
