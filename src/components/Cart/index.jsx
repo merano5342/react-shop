@@ -22,7 +22,6 @@ const Cart = () => {
     <div className="cart-container ml-3">
       <h4 className="cart-title mb-3"> 購物籃</h4>
       {productItem.map((item) => {
-        // const [name, count, prize, img] = item;
         return (
           <div className="product-container" key={productItem.indexOf(item)}>
             <div className="row my-3">

@@ -3,9 +3,9 @@ import { ReactComponent as Complete } from '../../assets/icons/pg-complete.svg';
 
 
 
-const StepProgress = (theIdx) => {
+const StepProgress = (props) => {
 
-  const { StepPhase } = theIdx;
+  const { step } = props;
 
   const steps = [
     { idx: 0, stepName: '寄送地址' },
@@ -15,12 +15,12 @@ const StepProgress = (theIdx) => {
   const [Step1, Step2, Step3] = [steps[0], steps[1], steps[2]]
 
   const statusControl = (theIdx) => {
-    let statusControl = '';
-    if (StepPhase === theIdx) {
+    let statusControl = ''
+    if (step === theIdx) {
       statusControl = 'on-step'
-    } else if (StepPhase > theIdx) {
+    } else if (step > theIdx) {
       statusControl = 'done'
-    } else if (StepPhase < theIdx) {
+    } else if (step < theIdx) {
       statusControl = 'disable'
     }
     return statusControl
