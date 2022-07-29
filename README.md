@@ -4,7 +4,12 @@
 
 目前完成階段 -> 
 v 使用 component 切分完版面
+
 v 完成 ProgressControl, ProgressControl 與 Steps 的畫面串接
+
+v 將專案導入 css-module
+
+v 將專案加入 React.memo, React.useCallback 優化效能
 
 ## 環境建置
 
