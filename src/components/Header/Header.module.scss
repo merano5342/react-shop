@@ -1,13 +1,13 @@
-@import "../../css/main.scss";
+// @import "../../css/main.scss";
 
-nav {
+.navbar {
   display: flex;
 
-  .nav-list {
+  .navList {
     display: flex;
     flex-direction: row;
 
-    .nav-item {
+    .navItem {
       cursor: pointer;
     }
   }

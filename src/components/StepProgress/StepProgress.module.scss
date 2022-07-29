@@ -1,14 +1,14 @@
-  .progress-container {
+  .container {
     display: flex;
     justify-content: space-around;
     margin: 50px 0;
   }
 
-  .progress-group {
+  .progressGroup {
     display: flex;
 
 
-    .progress-icon {
+    .progressIcon {
       display: inline-block;
       position: relative;
       width: 24px;
@@ -27,13 +27,13 @@
         text-align: center;
       }
 
-      .icon {
-        width: inherit;
-        height: inherit;
-      }
+      // .icon {
+      //   width: inherit;
+      //   height: inherit;
+      // }
     }
 
-    .progress-label {
+    .progressLabel {
       font-weight: 400;
       line-height: 24px;
       color: var(--main-text);
@@ -48,12 +48,12 @@
     margin-bottom: 3px;
   }
 
-  .complete {
+  .completeIcon {
     margin-right: 8px;
   }
 
 
-  .progress-bar {
+  .progressBar {
     border: 1px solid var(--main-text);
     max-width: 100px;
     width: 80%;
@@ -62,14 +62,14 @@
   }
 
 
-  .progress-group[data-status="disable"] {
+  .progressGroup[data-status="disable"] {
     opacity: 30%;
   }
 
-  .progress-icon[data-status="done"] {
+  .progressIcon[data-status="done"] {
     display: none;
   }
 
-  .complete[data-status="false"] {
+  .completeIcon[data-status="false"] {
     display: none;
   }

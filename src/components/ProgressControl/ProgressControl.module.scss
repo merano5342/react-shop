@@ -1,17 +1,17 @@
-.progress-control {
+.control {
   border-top: 1px solid #E6E6EB;
   padding-top: 26px;
 }
 
-.left-arrow {
+.leftArrow {
   margin: 0 5px 6px 0;
 }
 
-.right-arrow {
+.rightArrow {
   margin: 0 0 5px 6px;
 }
 
-button.pre-btn[data-active="false"] {
+.preBtn[data-active="false"] {
   display: none;
 }
 

@@ -1,3 +1,4 @@
+import React, { memo } from 'react';
 // phase="address"
 
 const inputItem = [
@@ -82,7 +83,7 @@ const genderOption = [
   { name: '不明', value: 'mx', selected: '' },
 ];
 
-const Inputs = (item) => {
+const inputs = (item) => {
   const inputHtml = () => {
     return (
       <div className={item.col} key={item.id}>
@@ -126,24 +127,24 @@ const Inputs = (item) => {
   return item.type.includes('select') ? selectHtml(item) : inputHtml(item);
 };
 
-const Step1 = () => {
+const Step1 = React.memo((props) => {
   return (
     <section className="form-body col col-12" data-phase="address">
       <h3 className="form-title mb-3">寄送地址</h3>
       <div className="row">
-        {Inputs(inputItem[0])}
-        {Inputs(inputItem[1])}
+        {inputs(inputItem[0])}
+        {inputs(inputItem[1])}
       </div>
       <div className="row">
-        {Inputs(inputItem[2])}
-        {Inputs(inputItem[3])}
+        {inputs(inputItem[2])}
+        {inputs(inputItem[3])}
       </div>
       <div className="row">
-        {Inputs(inputItem[4])}
-        {Inputs(inputItem[5])}
+        {inputs(inputItem[4])}
+        {inputs(inputItem[5])}
       </div>
     </section>
   );
-};
+});
 
 export default Step1;

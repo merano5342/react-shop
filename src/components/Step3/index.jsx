@@ -1,3 +1,4 @@
+import React, { memo } from 'react';
 // phase = "credit-card"
 
 const inputData = [
@@ -48,7 +49,7 @@ const input = (item) => {
     </div>
   );
 };
-const Step2 = () => {
+const Step3 = React.memo(() => {
   return (
     <section className="form-body col col-12" data-phase="credit-card">
       <h3 className="form-title mb-3">付款資訊</h3>
@@ -60,6 +61,6 @@ const Step2 = () => {
       </div>
     </section>
   );
-};
+});
 
-export default Step2;
+export default Step3

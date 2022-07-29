@@ -1,6 +1,7 @@
+import React, { memo } from 'react';
 // phase = "shipping"
 
-import './Step2.scss';
+import style from './Step2.module.scss';
 
 const radioData = [
   {
@@ -17,29 +18,32 @@ const radioData = [
   },
 ];
 
-const Step2 = () => {
-  return (
-    <section className="form-body col col-12" data-phase="shipping">
-      <h3 className="form-title mb-3">運送方式</h3>
-      {radioData.map((x) => {
-        return (
-          <div className="radio-group col col-12 mb-3" key={x.id}>
-            <div className="radio-right">
-              <input id={x.id} type="radio" name="shipping" className="radio" />
-              <label htmlFor="radio" />
-              <div className="radio-info">
-                <div className="radio-text">{x.name}</div>
-                <div className="radio-period col col-12">{x.period}</div>
-              </div>
-            </div>
-            <div className="radio-price">
-              {x.price === 0 ? '免費' : `$${x.price}`}
+const Step2 = React.memo(() => {
+  const radioDataMap = React.useCallback(
+    radioData.map((x) => {
+      return (
+        <div className={`${style.group} col col-12 mb-3`} key={x.id}>
+          <div className={style.groupRight}>
+            <input id={x.id} type="radio" name="shipping" />
+            <label />
+            <div className={style.info}>
+              <div className={style.text}>{x.name}</div>
+              <div className={`${style.period} col col-12`}>{x.period}</div>
             </div>
           </div>
-        );
-      })}
+          <div className={style.price}>
+            {x.price === 0 ? '免費' : `$${x.price}`}
+          </div>
+        </div>
+      );
+    }), [radioData])
+
+  return (
+    <section className={`${style.form} col col-12`} data-phase="shipping">
+      <h3 className="form-title mb-3">運送方式</h3>
+      {radioDataMap}
     </section>
   );
-};
+});
 
 export default Step2;

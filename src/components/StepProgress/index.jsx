@@ -1,9 +1,10 @@
-import './StepProgress.scss';
+import React, { memo } from 'react'
+import style from './StepProgress.module.scss';
 import { ReactComponent as Complete } from '../../assets/icons/pg-complete.svg';
 
 
 
-const StepProgress = (props) => {
+const StepProgress = React.memo((props) => {
 
   const { step } = props;
 
@@ -29,41 +30,41 @@ const StepProgress = (props) => {
   return (
     <>
       <h2 className="register-title col col-12">結帳</h2>
-      <section className="progress-container col col-12">
+      <section className={`${style.container} col col-12`}>
 
-        <span className="progress-group" data-status={statusControl(Step1.idx)}>
-          <Complete className="complete" alt="" data-status={statusControl(Step1.idx) === 'done'} />
-          <span className="progress-icon" data-status={statusControl(Step1.idx)}>
-            <span className="text">{Step1.idx + 1}</span>
-            <div className="circle" />
+        <span className={style.progressGroup} data-status={statusControl(Step1.completeIcon)}>
+          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step1.idx) === 'done'} />
+          <span className={style.progressIcon} data-status={statusControl(Step1.idx)}>
+            <span className={style.text}>{Step1.idx + 1}</span>
+            <div className={style.circle} />
           </span>
-          <span className="progress-label">{Step1.stepName}</span>
+          <span className={style.progressLabel}>{Step1.stepName}</span>
         </span>
 
-        <span className="progress-bar" data-status={statusControl(Step2.idx)} />
+        <span className={style.progressBar} data-status={statusControl(Step2.idx)} />
 
-        <span className="progress-group" data-status={statusControl(Step2.idx)}>
-          <Complete className="complete" alt="" data-status={statusControl(Step2.idx) === 'done'} />
-          <span className="progress-icon" data-status={statusControl(Step2.idx)}>
-            <span className="text">{Step2.idx + 1}</span>
-            <div className="circle" />
+        <span className={style.progressGroup} data-status={statusControl(Step2.idx)}>
+          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step2.idx) === 'done'} />
+          <span className={style.progressIcon} data-status={statusControl(Step2.idx)}>
+            <span className={style.text}>{Step2.idx + 1}</span>
+            <div className={style.circle} />
           </span>
-          <span className="progress-label">{Step2.stepName}</span>
+          <span className={style.progressLabel} >{Step2.stepName}</span>
         </span>
 
-        <span className="progress-bar" data-status={statusControl(Step3.idx)} />
+        <span className={style.progressBar} data-status={statusControl(Step3.idx)} />
 
-        <span className="progress-group" data-status={statusControl(Step3.idx)}>
-          <Complete className="complete" alt="" data-status={statusControl(Step3.idx) === 'done'} />
-          <span className="progress-icon" data-status={statusControl(Step3.idx)}>
-            <span className="text">{Step3.idx + 1}</span>
-            <div className="circle" />
+        <span className={style.progressGroup} data-status={statusControl(Step3.idx)}>
+          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step3.idx) === 'done'} />
+          <span className={style.progressIcon} data-status={statusControl(Step3.idx)}>
+            <span className={style.text} >{Step3.idx + 1}</span>
+            <div className={style.circle} />
           </span>
-          <span className="progress-label">{Step3.stepName}</span>
+          <span className={style.progressLabel}>{Step3.stepName}</span>
         </span>
       </section>
     </>
   );
-};
+});
 
 export default StepProgress;

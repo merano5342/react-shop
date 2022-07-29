@@ -1,13 +1,14 @@
-import "./Footer.scss";
+import React, { memo } from 'react';
+import style from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer = React.memo(() => {
   return (
-    <footer className="site-footer">
-      <div className="footer-container d-flex justify-content-center">
+    <footer>
+      <div className={`${style.container} d-flex justify-content-center`}>
         footer
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;
