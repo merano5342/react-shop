@@ -127,7 +127,7 @@ const inputs = (item) => {
   return item.type.includes('select') ? selectHtml(item) : inputHtml(item);
 };
 
-const Step1 = React.memo((props) => {
+const Step1 = (props) => {
   return (
     <section className="form-body col col-12" data-phase="address">
       <h3 className="form-title mb-3">寄送地址</h3>
@@ -145,6 +145,6 @@ const Step1 = React.memo((props) => {
       </div>
     </section>
   );
-});
+};
 
-export default Step1;
+export default React.memo(Step1);

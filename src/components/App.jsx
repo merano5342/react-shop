@@ -40,7 +40,7 @@ const productData: ProductDataType[] = [
 export default function App() {
   const [product, setProduct] = React.useState(productData);
   const [step, setStep] = React.useState(0);
-  let StepControl = STEP_MAP[step];
+  const StepControl = STEP_MAP[step];
 
   return (
     <>

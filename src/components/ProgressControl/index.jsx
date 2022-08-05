@@ -3,7 +3,7 @@ import style from './ProgressControl.module.scss'
 import { ReactComponent as LeftArrow } from '../../assets/icons/left-arrow.svg';
 import { ReactComponent as ReftArrow } from '../../assets/icons/right-arrow.svg';
 
-const ProgressControl = React.memo((props) => {
+const ProgressControl = (props) => {
   const { step, setStep } = props;
   return (
     <section className={`${style.control} col col-12`}>
@@ -29,6 +29,6 @@ const ProgressControl = React.memo((props) => {
       </div>
     </section>
   );
-});
+};
 
-export default ProgressControl;
+export default React.memo(ProgressControl);

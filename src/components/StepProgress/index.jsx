@@ -4,24 +4,24 @@ import { ReactComponent as Complete } from '../../assets/icons/pg-complete.svg';
 
 
 
-const StepProgress = React.memo((props) => {
+const StepProgress = (props) => {
 
   const { step } = props;
 
   const steps = [
-    { idx: 0, stepName: '寄送地址' },
-    { idx: 1, stepName: '運送方式' },
-    { idx: 2, stepName: '付款資訊' }];
+    { id: 1, stepName: '寄送地址' },
+    { id: 2, stepName: '運送方式' },
+    { id: 3, stepName: '付款資訊' }];
 
   const [Step1, Step2, Step3] = [steps[0], steps[1], steps[2]]
 
-  const statusControl = (idx) => {
+  const statusControl = (id) => {
     let statusControl = ''
-    if (step === idx) {
+    if (step === id) {
       statusControl = 'on-step'
-    } else if (step > idx) {
+    } else if (step > id) {
       statusControl = 'done'
-    } else if (step < idx) {
+    } else if (step < id) {
       statusControl = 'disable'
     }
     return statusControl
@@ -33,31 +33,31 @@ const StepProgress = React.memo((props) => {
       <section className={`${style.container} col col-12`}>
 
         <span className={style.progressGroup} data-status={statusControl(Step1.completeIcon)}>
-          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step1.idx) === 'done'} />
-          <span className={style.progressIcon} data-status={statusControl(Step1.idx)}>
-            <span className={style.text}>{Step1.idx + 1}</span>
+          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step1.id) === 'done'} />
+          <span className={style.progressIcon} data-status={statusControl(Step1.id)}>
+            <span className={style.text}>{Step1.id + 1}</span>
             <div className={style.circle} />
           </span>
           <span className={style.progressLabel}>{Step1.stepName}</span>
         </span>
 
-        <span className={style.progressBar} data-status={statusControl(Step2.idx)} />
+        <span className={style.progressBar} data-status={statusControl(Step2.id)} />
 
-        <span className={style.progressGroup} data-status={statusControl(Step2.idx)}>
-          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step2.idx) === 'done'} />
-          <span className={style.progressIcon} data-status={statusControl(Step2.idx)}>
-            <span className={style.text}>{Step2.idx + 1}</span>
+        <span className={style.progressGroup} data-status={statusControl(Step2.id)}>
+          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step2.id) === 'done'} />
+          <span className={style.progressIcon} data-status={statusControl(Step2.id)}>
+            <span className={style.text}>{Step2.id + 1}</span>
             <div className={style.circle} />
           </span>
           <span className={style.progressLabel} >{Step2.stepName}</span>
         </span>
 
-        <span className={style.progressBar} data-status={statusControl(Step3.idx)} />
+        <span className={style.progressBar} data-status={statusControl(Step3.id)} />
 
-        <span className={style.progressGroup} data-status={statusControl(Step3.idx)}>
-          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step3.idx) === 'done'} />
-          <span className={style.progressIcon} data-status={statusControl(Step3.idx)}>
-            <span className={style.text} >{Step3.idx + 1}</span>
+        <span className={style.progressGroup} data-status={statusControl(Step3.id)}>
+          <Complete className={style.completeIcon} alt="" data-status={statusControl(Step3.id) === 'done'} />
+          <span className={style.progressIcon} data-status={statusControl(Step3.id)}>
+            <span className={style.text} >{Step3.id + 1}</span>
             <div className={style.circle} />
           </span>
           <span className={style.progressLabel}>{Step3.stepName}</span>
@@ -65,6 +65,6 @@ const StepProgress = React.memo((props) => {
       </section>
     </>
   );
-});
+};
 
-export default StepProgress;
+export default React.memo(StepProgress);

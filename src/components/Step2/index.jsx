@@ -18,8 +18,8 @@ const radioData = [
   },
 ];
 
-const Step2 = React.memo(() => {
-  const radioDataMap = React.useCallback(
+const Step2 = () => {
+  const radioDataMap =
     radioData.map((x) => {
       return (
         <div className={`${style.group} col col-12 mb-3`} key={x.id}>
@@ -36,7 +36,7 @@ const Step2 = React.memo(() => {
           </div>
         </div>
       );
-    }), [radioData])
+    });
 
   return (
     <section className={`${style.form} col col-12`} data-phase="shipping">
@@ -44,6 +44,6 @@ const Step2 = React.memo(() => {
       {radioDataMap}
     </section>
   );
-});
+};
 
-export default Step2;
+export default React.memo(Step2);

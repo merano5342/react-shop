@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from 'react'
+import React, { memo } from 'react'
 import style from './Cart.module.scss';
 import cx from 'classnames'
 import { ReactComponent as Minus } from '../../assets/icons/minus.svg';
@@ -19,9 +19,9 @@ import { ReactComponent as Plus } from '../../assets/icons/plus.svg';
 //   },
 // ];
 
-const Cart = React.memo((props) => {
+const Cart = (props) => {
   const { productList, onSetProductList } = props;
-  const productCards = React.useCallback(productList.map((item) => {
+  const productCards = productList.map((item) => {
     return (
       <div className={style.productContainer} key={productList.indexOf(item)}>
         <div className="row my-3">
@@ -45,7 +45,7 @@ const Cart = React.memo((props) => {
         </div>
       </div>
     );
-  }), [productList])
+  });
   return (
     <div className={`${style.cart}  ml-3`}>
       <h4 className="cart-title mb-3"> 購物籃</h4>
@@ -60,6 +60,6 @@ const Cart = React.memo((props) => {
       </div>
     </div>
   );
-});
+};
 
-export default Cart;
+export default React.memo(Cart);

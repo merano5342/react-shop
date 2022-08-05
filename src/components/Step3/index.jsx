@@ -49,7 +49,7 @@ const input = (item) => {
     </div>
   );
 };
-const Step3 = React.memo(() => {
+const Step3 = () => {
   return (
     <section className="form-body col col-12" data-phase="credit-card">
       <h3 className="form-title mb-3">付款資訊</h3>
@@ -61,6 +61,6 @@ const Step3 = React.memo(() => {
       </div>
     </section>
   );
-});
+};
 
-export default Step3
+export default React.memo(Step3)

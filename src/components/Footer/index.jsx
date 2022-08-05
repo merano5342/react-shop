@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import style from "./Footer.module.scss";
 
-const Footer = React.memo(() => {
+const Footer = () => {
   return (
     <footer>
       <div className={`${style.container} d-flex justify-content-center`}>
@@ -9,6 +9,6 @@ const Footer = React.memo(() => {
       </div>
     </footer>
   );
-});
+};
 
-export default Footer;
+export default React.memo(Footer);
