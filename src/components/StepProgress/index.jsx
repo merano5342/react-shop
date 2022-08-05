@@ -32,10 +32,10 @@ const StepProgress = (props) => {
       <h2 className="register-title col col-12">結帳</h2>
       <section className={`${style.container} col col-12`}>
 
-        <span className={style.progressGroup} data-status={statusControl(Step1.completeIcon)}>
+        <span className={style.progressGroup} data-status={statusControl(Step1.id)}>
           <Complete className={style.completeIcon} alt="" data-status={statusControl(Step1.id) === 'done'} />
           <span className={style.progressIcon} data-status={statusControl(Step1.id)}>
-            <span className={style.text}>{Step1.id + 1}</span>
+            <span className={style.text}>{Step1.id}</span>
             <div className={style.circle} />
           </span>
           <span className={style.progressLabel}>{Step1.stepName}</span>
@@ -46,7 +46,7 @@ const StepProgress = (props) => {
         <span className={style.progressGroup} data-status={statusControl(Step2.id)}>
           <Complete className={style.completeIcon} alt="" data-status={statusControl(Step2.id) === 'done'} />
           <span className={style.progressIcon} data-status={statusControl(Step2.id)}>
-            <span className={style.text}>{Step2.id + 1}</span>
+            <span className={style.text}>{Step2.id}</span>
             <div className={style.circle} />
           </span>
           <span className={style.progressLabel} >{Step2.stepName}</span>
@@ -57,7 +57,7 @@ const StepProgress = (props) => {
         <span className={style.progressGroup} data-status={statusControl(Step3.id)}>
           <Complete className={style.completeIcon} alt="" data-status={statusControl(Step3.id) === 'done'} />
           <span className={style.progressIcon} data-status={statusControl(Step3.id)}>
-            <span className={style.text} >{Step3.id + 1}</span>
+            <span className={style.text} >{Step3.id}</span>
             <div className={style.circle} />
           </span>
           <span className={style.progressLabel}>{Step3.stepName}</span>

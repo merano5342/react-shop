@@ -37,6 +37,17 @@
       align-items: center;
       width: 200px;
       padding-top: 14px;
+
+      .btnMinus,
+      .btnPlus {
+        background-color: none;
+        border: none;
+      }
+
+      .btnMinus[disabled],
+      .btnPlus[disabled] {
+        opacity: 20%;
+      }
     }
   }
 }
