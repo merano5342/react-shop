@@ -13,9 +13,9 @@ type LineItemProps = {
 };
 
 const LineItem: React.FC<LineItemProps> = (props) => {
-  const { atUpdateQuantity, productData, onRemoveItem } = useCartContext()
+  const { atUpdateQuantity, onRemoveItem } = useCartContext()
   const { id, img, name, price, quantity } = props;
-  const inventory = productData.find((data) => data.id === id).quantity
+  // const inventory = productData.find((data) => data.id === id).quantity
   return (
     <div className={style.productContainer} >
       <div className="row my-3">
@@ -40,7 +40,7 @@ const LineItem: React.FC<LineItemProps> = (props) => {
 
               <button
                 className={style.btnPlus}
-                disabled={inventory - quantity < 1}
+                // disabled={inventory - quantity < 1}
                 onClick={() => atUpdateQuantity(id, quantity + 1)} >
                 <Plus />
               </button>

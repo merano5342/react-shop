@@ -82,13 +82,9 @@ export default function App() {
   }
   const providerValue = {
     products,
-    setProducts,
-    productData,
     step,
     setStep,
-    StepControl,
     totalAmount,
-    setTotalAmount,
     atUpdateQuantity,
     onRemoveItem
   }
@@ -102,7 +98,7 @@ export default function App() {
         <div className="container main-container row">
           <CartContext.Provider value={providerValue}>
             <section className="register-container col col-lg-7 col-sm-12">
-              <StepProgress step={step} />
+              <StepProgress />
               <StepControl />
               <ProgressControl />
             </section>

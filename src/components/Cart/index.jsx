@@ -7,15 +7,13 @@ import LineItem from './LineItem';
 
 
 const Cart = () => {
-  const { products, setProducts, step, setStep, StepControl, totalAmount, setTotalAmount, productData } = useCartContext()
-
-  console.log(StepControl)
-
+  const { products, step, totalAmount, setTotalAmount } = useCartContext()
 
 
   return (
     <div className={`${style.cart}  ml-3`}>
       <h4 className="cart-title mb-3"> 購物籃</h4>
+      <p className="mr-3">{`it's now on step ${step}`}</p>
       {products.map((item) => {
         return (<LineItem
           key={item.id}
@@ -24,7 +22,7 @@ const Cart = () => {
           name={item.name}
           price={item.price}
           quantity={item.quantity}
-          inventory={productData.find((data) => data.id === item.id).inventory}
+        // inventory={productData.find((data) => data.id === item.id).inventory}
         />)
       })}
       <div className={style.cartInfo}>

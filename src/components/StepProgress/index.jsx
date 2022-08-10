@@ -1,12 +1,13 @@
-import React, { memo } from 'react'
+import React, { memo, useContext } from 'react'
 import style from './StepProgress.module.scss';
 import { ReactComponent as Complete } from '../../assets/icons/pg-complete.svg';
+import { useCartContext } from '../Cart/CartContext';
 
 
 
-const StepProgress = (props) => {
+const StepProgress = () => {
 
-  const { step } = props;
+  const { step } = useCartContext()
 
   const steps = [
     { id: 1, stepName: '寄送地址' },

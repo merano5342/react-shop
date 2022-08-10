@@ -4,9 +4,9 @@ import { ReactComponent as LeftArrow } from '../../assets/icons/left-arrow.svg';
 import { ReactComponent as ReftArrow } from '../../assets/icons/right-arrow.svg';
 import { useCartContext } from '../Cart/CartContext';
 
-const ProgressControl = (props) => {
-  // const { step, setStep } = props;
-  const { step, setStep } = useCartContext()
+const ProgressControl = () => {
+  // const { setStep, step } = props;
+  const { setStep, step } = useCartContext()
   return (
     <section className={`${style.control} col col-12`}>
       <div className="d-flex justify-content-between">
