@@ -1,38 +1,33 @@
+import { useCartContext } from 'components/Cart/CartContext';
 import React, { memo } from 'react';
 // phase = "shipping"
-
+import { shippingRadioData } from '../config'
 import style from './Step2.module.scss';
 
-const radioData = [
-  {
-    id: 'shipping-standard',
-    name: '標準運送',
-    period: '約 3~7 個工作天',
-    price: 0,
-  },
-  {
-    id: 'shipping-dhl',
-    name: 'DHL 貨運',
-    period: '48 小時內送達',
-    price: 500,
-  },
-];
+
 
 const Step2 = () => {
+  const { atApplyShipping } = useCartContext()
   const radioDataMap =
-    radioData.map((x) => {
+    shippingRadioData.map((shipping) => {
+
       return (
-        <div className={`${style.group} col col-12 mb-3`} key={x.id}>
+        <div className={`${style.group} col col-12 mb-3`} key={shipping.id}>
           <div className={style.groupRight}>
-            <input id={x.id} type="radio" name="shipping" />
+            <input id={shipping.id} type="radio" name="shipping"
+              onClick={() => {
+                console.log(shipping.price)
+                atApplyShipping(shipping);
+              }}
+            />
             <label />
             <div className={style.info}>
-              <div className={style.text}>{x.name}</div>
-              <div className={`${style.period} col col-12`}>{x.period}</div>
+              <div className={style.text}>{shipping.name}</div>
+              <div className={`${style.period} col col-12`}>{shipping.period}</div>
             </div>
           </div>
           <div className={style.price}>
-            {x.price === 0 ? '免費' : `$${x.price}`}
+            {shipping.price === 0 ? '免費' : `$${shipping.price}`}
           </div>
         </div>
       );

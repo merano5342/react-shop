@@ -3,35 +3,36 @@ import style from './Cart.module.scss';
 import cx from 'classnames'
 
 import { useCartContext } from './CartContext';
-import LineItem from './LineItem';
+import CartItem from './CartItem';
 
 
-const Cart = () => {
-  const { products, step, totalAmount, setTotalAmount } = useCartContext()
+const Cart = (props) => {
+  const { state, cartItems, productData, step, totalAmount, setTotalAmount, atUpdateQuantity } = useCartContext()
+  const cart = state
+  const shippingOpt = state.shipping
 
 
   return (
     <div className={`${style.cart}  ml-3`}>
       <h4 className="cart-title mb-3"> 購物籃</h4>
       <p className="mr-3">{`it's now on step ${step}`}</p>
-      {products.map((item) => {
-        return (<LineItem
+      {cartItems.map((item) => {
+        return (<CartItem
           key={item.id}
           id={item.id}
           img={item.img}
           name={item.name}
           price={item.price}
           quantity={item.quantity}
-        // inventory={productData.find((data) => data.id === item.id).inventory}
         />)
       })}
       <div className={style.cartInfo}>
         <div className={style.text}>運費</div>
-        <div className={style.price}>免費</div>
+        <div className={style.price}>{shippingOpt.price === 0 ? '免費' : `$ ${shippingOpt.price}`}</div>
       </div>
       <div className={style.cartInfo}>
         <div className={style.text}>小計</div>
-        <div className={style.price}>${totalAmount}</div>
+        <div className={style.price}>${cart.totalAmount}</div>
       </div>
     </div>
   );

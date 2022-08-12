@@ -1,21 +1,16 @@
 import React, { memo } from 'react'
 import style from './Cart.module.scss';
+import { CartItemType } from '../type'
 import { ReactComponent as Minus } from '../../assets/icons/minus.svg';
 import { ReactComponent as Plus } from '../../assets/icons/plus.svg';
 import { useCartContext } from './CartContext';
 
-type LineItemProps = {
-  id: string,
-  img: string,
-  name: String,
-  price: number,
-  quantity: number,
-};
 
-const LineItem: React.FC<LineItemProps> = (props) => {
-  const { atUpdateQuantity, onRemoveItem } = useCartContext()
+
+const CartItem: CartItemType = (props) => {
+  const { atRemoveItem, atUpdateQuantity } = useCartContext()
   const { id, img, name, price, quantity } = props;
-  // const inventory = productData.find((data) => data.id === id).quantity
+
   return (
     <div className={style.productContainer} >
       <div className="row my-3">
@@ -45,7 +40,7 @@ const LineItem: React.FC<LineItemProps> = (props) => {
                 <Plus />
               </button>
 
-              <button className="btn btn-outline-danger" onClick={() => onRemoveItem(id)}>remove</button>
+              <button className="btn btn-outline-danger" onClick={() => atRemoveItem(id)}>remove</button>
             </div>
           </div>
         </div>
@@ -54,4 +49,4 @@ const LineItem: React.FC<LineItemProps> = (props) => {
   );
 
 }
-export default React.memo(LineItem);
+export default React.memo(CartItem);
